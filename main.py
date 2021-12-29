@@ -161,6 +161,8 @@ def main(args):
     lr_scheduler, _ = create_scheduler(args, optimizer)
     dataset_train = build_dataset(image_set='train', args=args)
     dataset_val = build_dataset(image_set='val', args=args)
+
+    print(f"Len dataset train: {len(dataset_train)}")
     # import pdb;pdb.set_trace()
     if args.distributed:
         sampler_train = DistributedSampler(dataset_train)

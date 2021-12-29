@@ -162,7 +162,8 @@ def main(args):
     dataset_train = build_dataset(image_set='train', args=args)
     dataset_val = build_dataset(image_set='val', args=args)
 
-    print(f"Len dataset train: {len(dataset_train)}")
+    print(f"Len dataset test: {len(dataset_val)}")
+
     # import pdb;pdb.set_trace()
     if args.distributed:
         sampler_train = DistributedSampler(dataset_train)

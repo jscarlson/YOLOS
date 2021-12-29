@@ -176,6 +176,7 @@ def build(image_set, args):
         "val": (root / "generated", root / "input" / f'train80_fixed.json'),
     }
     for k, v in PATHS.items():
+        print(v[0])
         assert os.path.isfile(v[0]) 
 
     img_folder, ann_file = PATHS[image_set]

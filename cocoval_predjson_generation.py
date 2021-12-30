@@ -180,6 +180,8 @@ def get_args_parser():
     parser.add_argument('--world_size', default=1, type=int,
                         help='number of distributed processes')
     parser.add_argument('--dist_url', default='env://', help='url used to set up distributed training')
+    parser.add_argument('--use_checkpoint', action='store_true',
+                        help='use checkpoint.checkpoint to save mem')
     return parser
 
 
